@@ -19,4 +19,3 @@ const UsersSchema = new Schema ({
     },
 },
 );
-
