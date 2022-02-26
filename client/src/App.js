@@ -10,7 +10,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
-import NavHeader from './pages/NavHeader';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
