@@ -11,8 +11,6 @@ const postSchema = new Schema({
   },
 });
 
-//const Post = model('Post', postSchema);
-
 module.exports = postSchema;
 
 const Post = require('./Post');
