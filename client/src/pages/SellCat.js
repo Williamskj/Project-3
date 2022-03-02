@@ -1,11 +1,13 @@
+
+
 import React from 'react';
 import { useQuery } from '@apollo/client';
 
-import { QUERY_PROFILES } from '../utils/queries';
+import { QUERY_USERS } from '../utils/queries';
 
 const Sell = () => {
-  const { loading, data } = useQuery(QUERY_PROFILES);
-  const profiles = data?.profiles || [];
+  const { loading, data } = useQuery(QUERY_USERS);
+  const users = data?.users || [];
 
   return (
     <main>
