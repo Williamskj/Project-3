@@ -15,7 +15,7 @@ const typeDefs = gql`
     title: String
     description: String
     user: User!
-    savedComments: [Comment]
+    comments: [Comment]
   }
 
   type Comment {
@@ -31,7 +31,7 @@ const typeDefs = gql`
 
   type Query {
     users: [User]!
-    user(UserId: ID!): User
+    user(email: String!): User
     # Because we have the context functionality in place to check a JWT and decode its data, we can use a query that will always find and return the logged in user's data
     me: User
   }
@@ -49,10 +49,10 @@ const typeDefs = gql`
   type Mutation {
     addUser(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
-    addPost(posts: SavedPostInput): User
-    addComment(postId: ID!, comments: SavedCommentInput): Post
+    addPost(posts: SavedPostInput): Post
+    addComment(postId: ID!, commentText: String!): Post
     removeUser: User
-    removePost(postId: ID!): User
+    removePost(postId: ID!): Post
     removeComment(postId: ID!, commentId: ID!): Post
   }
 `;

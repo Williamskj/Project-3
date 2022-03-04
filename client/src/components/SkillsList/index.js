@@ -1,11 +1,11 @@
 import React from 'react';
 import { useMutation } from '@apollo/client';
 
-import { REMOVE_SKILL } from '../../utils/mutations';
+import { REMOVE_POST } from '../../utils/mutations';
 import { QUERY_ME } from '../../utils/queries';
 
-const SkillsList = ({ skills, isLoggedInUser = false }) => {
-  const [removeSkill, { error }] = useMutation(REMOVE_SKILL, {
+const PostsList = ({ posts, isLoggedInUser = false }) => {
+  const [removeSkill, { error }] = useMutation(REMOVE_POST, {
     update(cache, { data: { removeSkill } }) {
       try {
         cache.writeQuery({
@@ -28,15 +28,15 @@ const SkillsList = ({ skills, isLoggedInUser = false }) => {
     }
   };
 
-  if (!skills.length) {
-    return <h3>No Skills Yet</h3>;
+  if (!posts.length) {
+    return <h3>No Posts Yet</h3>;
   }
 
   return (
     <div>
       <div className="flex-row justify-space-between my-4">
-        {skills &&
-          skills.map((skill) => (
+        {posts &&
+          posts.map((skill) => (
             <div key={skill} className="col-12 col-xl-6">
               <div className="card mb-3">
                 <h4 className="card-header bg-dark text-light p-2 m-0 display-flex align-center">
@@ -61,4 +61,4 @@ const SkillsList = ({ skills, isLoggedInUser = false }) => {
   );
 };
 
-export default SkillsList;
+export default PostsList;

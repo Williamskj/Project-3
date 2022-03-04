@@ -47,35 +47,56 @@ const resolvers = {
     // Add a third argument to the resolver to access data in our `context`
     addPost: async (parent, { posts }, context) => {
       console.log('Context!!! in add post', context.user)
+      console.log('ITs outs posts', posts)
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
       if (context.user) {
-        return User.findOneAndUpdate(
-          { _id: context.user._id },
+
+        try {
+
+        
+        const newPost = await Post.create(
+         
           {
-            $addToSet: { savedPosts: posts },
-          },
-          {
-            new: true,
-            runValidators: true,
+           title: posts.title,
+           description: posts.description,
+           user: context.user._id,
+           comments: []
           }
         );
+        return newPost
+      } catch(err) {
+        console.log('ERRRRRR in resolver', err)
+      }
+        // return User.findOneAndUpdate(
+        //   { _id: context.user._id },
+        //   {
+        //     $addToSet: { savedPosts: posts },
+        //   },
+        //   {
+        //     new: true,
+        //     runValidators: true,
+        //   }
+        // );
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError('You need to be logged in!');
     },
-    addComment: async (parent, { postId, comments }, context) => {
+    addComment: async (parent, { postId, commentText }, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
       if (context.user) {
-        return Post.findOneAndUpdate(
+        console.log('COmments to save', commentText)
+        const updatedPost = await Post.findOneAndUpdate(
           { _id: postId },
           {
-            $addToSet: { savedComments: comments },
+            $addToSet: { comments: {commentText} },
           },
           {
             new: true,
             runValidators: true,
           }
         );
+        console.log('Updated post after adding comment',updatedPost)
+        return updatedPost
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError('You need to be logged in!');
