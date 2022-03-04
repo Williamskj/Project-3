@@ -1,7 +1,7 @@
 {
   "name": "mern-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "In this demo, you will create a profile and verify JSON Web Tokens to log into a profile.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

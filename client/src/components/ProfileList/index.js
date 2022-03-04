@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ProfileList = ({ profiles, title }) => {
-  if (!profiles.length) {
+const ProfileList = ({ users, title }) => {
+  if (!users.length) {
     return <h3>No Profiles Yet</h3>;
   }
 
@@ -10,12 +10,12 @@ const ProfileList = ({ profiles, title }) => {
     <div>
       <h3 className="text-primary">{title}</h3>
       <div className="flex-row justify-space-between my-4">
-        {profiles &&
-          profiles.map((profile) => (
-            <div key={profile._id} className="col-12 col-xl-6">
+        {users &&
+          users.map((users) => (
+            <div key={users._id} className="col-12 col-xl-6">
               <div className="card mb-3">
                 <h4 className="card-header bg-dark text-light p-2 m-0">
-                  {profile.name} <br />
+                  {users.name} <br />
                   <span className="text-white" style={{ fontSize: '1rem' }}>
                     currently selling {profile.skills ? profile.skills.length : 0}{' '}
                     beverage
@@ -25,7 +25,7 @@ const ProfileList = ({ profiles, title }) => {
 
                 <Link
                   className="btn btn-block btn-squared btn-light text-dark"
-                  to={`/profiles/${profile._id}`}
+                  to={`/users/${users._id}`}
                 >
                   View all the beverages that this seller has to offer.
                 </Link>
