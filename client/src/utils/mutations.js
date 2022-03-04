@@ -15,23 +15,19 @@ export const ADD_USER = gql`
 export const ADD_POST = gql`
   mutation addPost($input: SavedPostInput ) {
     addPost(posts: $input) {
-      _id
-      name
-      savedPosts {
-        title
-        description
-      }
+      title
+      description
     }
   }
 `;
 
 export const ADD_COMMENT = gql`
-  mutation addComment($postId: ID!, $input: SavedCommentInput) {
-    addComment(postId: $postId, comments: $input) {
+  mutation addComment($postId: ID!, $commentText: String!) {
+    addComment(postId: $postId, commentText: $commentText) {
       _id
       title
       description
-      savedComments {
+      comments {
         commentText
       }
     }
@@ -51,14 +47,10 @@ export const LOGIN_USER = gql`
 `;
 
 export const REMOVE_POST = gql`
-  mutation removePost($postTitle: String!) {
-    removePost(postTitle: $title) {
-      _id
-      name
-      savedPosts {
-        title
-        description
-      }
+  mutation removePost($postId: ID!) {
+    removePost(postId: $postId) {
+      title
+      description
     }
   }
 `;
@@ -69,7 +61,7 @@ export const REMOVE_COMMENT = gql`
       _id
       title
       description
-      savedComments {
+      comments {
         commentText
       }
     }
