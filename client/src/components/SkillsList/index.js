@@ -5,12 +5,12 @@ import { REMOVE_POST } from '../../utils/mutations';
 import { QUERY_ME } from '../../utils/queries';
 
 const PostsList = ({ posts, isLoggedInUser = false }) => {
-  const [removeSkill, { error }] = useMutation(REMOVE_POST, {
-    update(cache, { data: { removeSkill } }) {
+  const [removeSavedPosts, { error }] = useMutation(REMOVE_POST, {
+    update(cache, { data: { removeSavedPosts } }) {
       try {
         cache.writeQuery({
           query: QUERY_ME,
-          data: { me: removeSkill },
+          data: { me: removeSavedPosts },
         });
       } catch (e) {
         console.error(e);
@@ -18,10 +18,10 @@ const PostsList = ({ posts, isLoggedInUser = false }) => {
     },
   });
 
-  const handleRemoveSkill = async (skill) => {
+  const handleRemoveSavedPosts = async (savedPosts) => {
     try {
-      const { data } = await removeSkill({
-        variables: { skill },
+      const { data } = await removeSavedPosts({
+        variables: { savedPosts },
       });
     } catch (err) {
       console.error(err);
@@ -36,15 +36,15 @@ const PostsList = ({ posts, isLoggedInUser = false }) => {
     <div>
       <div className="flex-row justify-space-between my-4">
         {posts &&
-          posts.map((skill) => (
-            <div key={skill} className="col-12 col-xl-6">
+          posts.map((savedPosts) => (
+            <div key={savedPosts} className="col-12 col-xl-6">
               <div className="card mb-3">
                 <h4 className="card-header bg-dark text-light p-2 m-0 display-flex align-center">
-                  <span>{skill}</span>
+                  <span>{savedPosts}</span>
                   {isLoggedInUser && (
                     <button
                       className="btn btn-sm btn-danger ml-auto"
-                      onClick={() => handleRemoveSkill(skill)}
+                      onClick={() => handleRemoveSavedPosts(savedPosts)}
                     >
                       X
                     </button>

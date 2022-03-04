@@ -51,9 +51,9 @@ const Profile = () => {
         
       </h2>
 
-      {user.skills?.length > 0 && (
+      {user.savedPosts?.length > 0 && (
         <SkillsList
-          skills={user.skills}
+          savedPosts={user.savedPosts}
           isLoggedInUser={!userId && true}
         />
       )}
