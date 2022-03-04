@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ProfileList = ({ users, title }) => {
+const userList = ({ users, title }) => {
   if (!users.length) {
-    return <h3>No Profiles Yet</h3>;
+    return <h3>No users Yet</h3>;
   }
 
   return (
@@ -17,9 +17,9 @@ const ProfileList = ({ users, title }) => {
                 <h4 className="card-header bg-dark text-light p-2 m-0">
                   {users.name} <br />
                   <span className="text-white" style={{ fontSize: '1rem' }}>
-                    currently has {users.posts ? users.posts.length : 0}{' '}
-                    endorsed skill
-                    {users.posts && users.posts.length === 1 ? '' : 's'}
+                    currently selling {users.savedPosts ? users.savedPosts.length : 0}{' '}
+                    beverage
+                    {users.savedPosts && users.savedPosts.length === 1 ? '' : 's'}
                   </span>
                 </h4>
 
@@ -27,7 +27,7 @@ const ProfileList = ({ users, title }) => {
                   className="btn btn-block btn-squared btn-light text-dark"
                   to={`/users/${users._id}`}
                 >
-                  View and endorse their skills.
+                  View all the beverages that this seller has to offer.
                 </Link>
               </div>
             </div>
@@ -37,4 +37,4 @@ const ProfileList = ({ users, title }) => {
   );
 };
 
-export default ProfileList;
+export default userList;
