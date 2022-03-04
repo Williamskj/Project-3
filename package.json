@@ -1,7 +1,6 @@
 {
   "name": "tech-friends",
   "version": "1.0.0",
-  "description": "",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
@@ -20,5 +19,14 @@
     "materialize-css": "^1.0.0-rc.2",
     "react-bootstrap": "^2.1.2",
     "react-materialize": "^3.10.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Williamskj/Project-3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Williamskj/Project-3/issues"
+  },
+  "homepage": "https://github.com/Williamskj/Project-3#readme",
+  "description": ""
 }

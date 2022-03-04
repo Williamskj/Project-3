@@ -25,6 +25,19 @@ export const ADD_POST = gql`
   }
 `;
 
+export const ADD_COMMENT = gql`
+  mutation addComment($postId: ID!, $input: SavedCommentInput) {
+    addComment(postId: $postId, comments: $input) {
+      _id
+      title
+      description
+      savedComments {
+        commentText
+      }
+    }
+  }
+`;
+
 export const LOGIN_USER = gql`
   mutation login($email: String!, $password: String!) {
     login(email: $email, password: $password) {
@@ -45,6 +58,19 @@ export const REMOVE_POST = gql`
       savedPosts {
         title
         description
+      }
+    }
+  }
+`;
+
+export const REMOVE_COMMENT = gql`
+  mutation removeComment($postId: ID!, $commentId: ID!) {
+    addComment(postId: $postId, commentId: $commentId) {
+      _id
+      title
+      description
+      savedComments {
+        commentText
       }
     }
   }

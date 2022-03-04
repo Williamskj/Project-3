@@ -21,7 +21,12 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  savedPosts: [postSchema],
+  savedPosts: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Post',
+    },
+  ]
 });
 
 // set up pre-save middleware to create password

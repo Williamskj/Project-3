@@ -5,17 +5,29 @@ export const QUERY_USERS = gql`
     users {
       _id
       name
-      skills
+      savedPosts {
+        title
+        description
+        savedComments{
+          commmentText
+        }
+      }
     }
   }
 `;
 
 export const QUERY_SINGLE_USER = gql`
-  query singleUser($userId: ID!) {
-    user(userId: $userId) {
+  query singleUser($email: String!) {
+    user(email: $email) {
       _id
       name
-      skills
+      savedPosts {
+        title
+        description
+        savedComments{
+          commmentText
+        }
+      }
     }
   }
 `;
@@ -25,7 +37,13 @@ export const QUERY_ME = gql`
     me {
       _id
       name
-      skills
+      savedPosts {
+        title
+        description
+        savedComments{
+          commmentText
+        }
+      }
     }
   }
 `;
