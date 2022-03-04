@@ -1,78 +1,78 @@
 [
   {
-    "name": "Brian Kernighan",
-    "email": "bkernighan@techfriends.dev",
+    "name": "Keyann Williams",
+    "email": "keyann@123.com",
     "password": "password01",
-    "skills": ["AWK", "AMPL", "Unix"]
+    "skills": ["Beer", "Wine", "Liquor"]
   },
   {
-    "name": "Max Kanat-Alexander",
-    "email": "mkanatalexander@techfriends.dev",
+    "name": "Newton Hoang",
+    "email": "newton@123.com",
     "password": "password02",
-    "skills": ["Java", "Perl", "Apache", "Python"]
+    "skills": ["Tea", "Buble tea", "coffee", "soda"]
   },
   {
-    "name": "Amiko",
-    "email": "amiko@techfriends.dev",
+    "name": "Yudong Lu",
+    "email": "yudong@123.com",
     "password": "password03",
-    "skills": ["NodeJS", "MySQL", "MongoDB", "React", "CSS-in-JS"]
+    "skills": ["juice", "hot coco", "wine", "beer", "tea"]
   },
   {
-    "name": "Kent Beck",
+    "name": "Eddy Tuzolana",
     "email": "kbeck@techfriends.dev",
     "password": "password04",
     "skills": [
-      "Test-Driven Development",
-      "Extreme Programming",
-      "Software Design Patterns",
-      "JUnit"
+      "sports dirnks",
+      "juice",
+      "hot coco",
+      "beer"
     ]
   },
   {
     "name": "Edward V. Berard",
     "email": "evberard@techfriends.dev",
     "password": "password05",
-    "skills": ["Object-Oriented Design"]
+    "skills": ["soda","juice","beer"]
   },
   {
     "name": "Alan Kay",
     "email": "akay@techfriends.dev",
     "password": "password06",
     "skills": [
-      "Graphical User Interface (GUI) Design",
-      "Jazz Guitar",
-      "Education"
+      "soda",
+      "Coke",
+      "vodka"
     ]
   },
   {
     "name": "C.A.R. Hoare",
     "email": "choare@techfriends.dev",
     "password": "password07",
-    "skills": ["Algorithms", "Quicksort", "Hoare Logic"]
+    "skills": ["vodka", "juice", "Coke"]
   },
   {
     "name": "David Thomas",
     "email": "dthomas@techfriends.dev",
     "password": "password08",
-    "skills": ["Author", "Code Kata", "Ruby", "Pragmatic Programming"]
+    "skills": ["liquor", "Coke", "milk", "vodka"]
   },
   {
     "name": "Donald Knuth",
     "email": "dknuth@techfriends.dev",
     "password": "password09",
-    "skills": ["TeX Computer Typesetting", "Algorithms", "Author"]
+    "skills": ["beer"]
   },
   {
     "name": "Lernantino",
     "email": "lernantino@techfriends.dev",
     "password": "password10",
     "skills": [
-      "JavaScript",
-      "CSS",
-      "HTML",
-      "Design Systems",
-      "Typescript",
-      "PWAs"
+      "beer",
+      "juice",
+      "liquor",
+      "vodka",
+      "milk",
+      "water"
     ]
   }
 ]
