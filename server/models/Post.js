@@ -19,7 +19,7 @@ const postSchema = new Schema({
     {
       commentText: {
         type: String,
-      //  required: true,
+        required: true,
         minlength: 1,
         maxlength: 280,
       },
