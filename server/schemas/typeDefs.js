@@ -15,6 +15,13 @@ const typeDefs = gql`
     title: String
     description: String
     user: User!
+    savedComments: [Comment]
+  }
+
+  type Comment {
+    _id: ID
+    commentText: String
+    commentAuthor: String
   }
 
   type Auth {
@@ -32,14 +39,21 @@ const typeDefs = gql`
   input SavedPostInput {
     title: String
     description: String
-}
+  }
+
+  input SavedCommentInput {
+    commentText: String
+    commentAuthor: String
+  }
 
   type Mutation {
     addUser(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addPost(posts: SavedPostInput): User
+    addComment(postId: ID!, comments: SavedCommentInput): Post
     removeUser: User
     removePost(postId: ID!): User
+    removeComment(postId: ID!, commentId: ID!): Post
   }
 `;
 
