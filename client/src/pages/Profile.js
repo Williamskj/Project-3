@@ -47,12 +47,8 @@ const Profile = () => {
   return (
     <div>
       <h2 className="card-header">
-<<<<<<< HEAD
-        {profileId ? `${profile.name}'s` : 'Your'} following beverages are for selling:
-=======
-        {userId ? `${user.name}'s` : 'Your'} friends have endorsed these
-        skills...
->>>>>>> 8d636aaba9f808c2a7349a9ed0f4109b32985d9e
+        {userId ? `${user.name}'s` : 'Your'} following beverages are for selling:
+        
       </h2>
 
       {user.skills?.length > 0 && (
