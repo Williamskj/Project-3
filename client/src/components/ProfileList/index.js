@@ -25,7 +25,7 @@ const ProfileList = ({ users, title }) => {
 
                 <Link
                   className="btn btn-block btn-squared btn-light text-dark"
-                  to={`/users/${user._id}`}
+                  to={`/users/${users._id}`}
                 >
                   View and endorse their skills.
                 </Link>
