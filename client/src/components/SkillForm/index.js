@@ -40,7 +40,7 @@ const PostForm = ({ userId, handleFormSubmit, formData, setFormData }) => {
           </div>
 
           <div className="col-12 col-lg-3">
-            <button className="btn btn-info btn-block py-3" type="submit">
+            <button className="btn btn-info btn-block" type="submit">
               Post Review
             </button>
           </div>
