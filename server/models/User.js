@@ -23,8 +23,8 @@ const userSchema = new Schema({
   },
   savedPosts: [
     {
-      type: String,
-      trim: true,
+      type: Schema.Types.ObjectId,
+      ref: 'Post',
     },
   ]
 });

@@ -58,12 +58,12 @@ function App() {
             </Route>
             <Route exact path="/store">
               <Store />
-            </Route>
+            {/* </Route>
             <Route exact path="/store/buy">
               <Buy />
             </Route>
             <Route exact path="/store/sell">
-              <Sell />
+              <Sell /> */}
             </Route>
             <Route exact path="/me">
               <Profile />

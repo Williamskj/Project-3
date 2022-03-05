@@ -48,3 +48,16 @@ export const QUERY_ME = gql`
   }
 `;
 
+export const QUERY_POSTS = gql `
+query posts {
+  posts {
+    title
+    description
+    user
+    comments {
+      commentText
+      commentAuthor
+    }
+  }
+}`;
+

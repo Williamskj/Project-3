@@ -6,28 +6,15 @@ import { ADD_POST } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
-const PostForm = ({ userId }) => {
+const PostForm = ({ userId, handleFormSubmit, formData, setFormData }) => {
+
   const [post, setPost] = useState('');
 
   const [addPost, { error }] = useMutation(ADD_POST);
 
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      const data = await addPost({
-        variables: { userId, post },
-      });
-
-      setPost('');
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
   return (
     <div>
-      <h4>Endorse some more Posts below.</h4>
+      <h4>Create a Review</h4>
 
       {Auth.loggedIn() ? (
         <form
@@ -36,16 +23,25 @@ const PostForm = ({ userId }) => {
         >
           <div className="col-12 col-lg-9">
             <input
-              placeholder="Endorse some Posts..."
-              value={post}
+              placeholder="Review Title"
+              value={formData.title}
               className="form-input w-100"
-              onChange={(event) => setPost(event.target.value)}
+              onChange={(event) => setFormData({
+                ...formData,
+                title: event.target.value
+              })}
             />
+            <textarea value = {formData.description} onChange = {(event) => setFormData({
+              ...formData,
+              description: event.target.value
+            })}>
+
+            </textarea>
           </div>
 
           <div className="col-12 col-lg-3">
             <button className="btn btn-info btn-block py-3" type="submit">
-              Endorse Post
+              Post Review
             </button>
           </div>
           {error && (
@@ -56,7 +52,7 @@ const PostForm = ({ userId }) => {
         </form>
       ) : (
         <p>
-          You need to be logged in to endorse Posts. Please{' '}
+          You need to be logged in to post reviews. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
