@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 // const postSchema = require('./Post');
 
 const userSchema = new Schema({
-  name: {
+  username: {
     type: String,
     required: true,
     unique: true,
