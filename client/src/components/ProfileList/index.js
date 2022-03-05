@@ -1,34 +1,36 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ProfileList = ({ users, title }) => {
-  if (!users.length) {
-    return <h3>No Profiles Yet</h3>;
+const userList = ({ users, title, posts }) => {
+  if (!posts.length) {
+    return <h3>No users Yet</h3>;
   }
 
   return (
     <div>
       <h3 className="text-primary">{title}</h3>
       <div className="flex-row justify-space-between my-4">
-        {users &&
-          users.map((users) => (
-            <div key={users._id} className="col-12 col-xl-6">
+        {posts &&
+          posts.map((post) => (
+            <div key={post._id} className="col-12 col-xl-6">
               <div className="card mb-3">
                 <h4 className="card-header bg-dark text-light p-2 m-0">
-                  {users.name} <br />
-                  <span className="text-white" style={{ fontSize: '1rem' }}>
-                    currently has {users.posts ? users.posts.length : 0}{' '}
-                    endorsed skill
-                    {users.posts && users.posts.length === 1 ? '' : 's'}
-                  </span>
+                  {post.title} <br />
+                  {post.description}
+                  By {post.user}
+                  {/* <span className="text-white" style={{ fontSize: '1rem' }}>
+                    currently selling {user.savedPosts ? user.savedPosts.length : 0}{' '}
+                    beverage
+                    {user.savedPosts && user.savedPosts.length === 1 ? '' : 's'}
+                  </span> */}
                 </h4>
 
-                <Link
+                {/* <Link
                   className="btn btn-block btn-squared btn-light text-dark"
                   to={`/users/${user._id}`}
                 >
-                  View and endorse their skills.
-                </Link>
+                  View all the beverages that this seller has to offer.
+                </Link> */}
               </div>
             </div>
           ))}
@@ -37,4 +39,4 @@ const ProfileList = ({ users, title }) => {
   );
 };
 
-export default ProfileList;
+export default userList;

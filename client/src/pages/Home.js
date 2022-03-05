@@ -3,22 +3,26 @@ import { useQuery } from '@apollo/client';
 
 import ProfileList from '../components/ProfileList';
 
-import { QUERY_USERS } from '../utils/queries';
+import { QUERY_USERS, QUERY_POSTS } from '../utils/queries';
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_USERS);
+  const postdata = useQuery(QUERY_POSTS);
   const users = data?.users || [];
+  const posts = postdata.data?.posts || [];
+  console.log('posts', posts)
 
   return (
     <main>
       <div className="flex-row justify-center">
         <div className="col-12 col-md-10 my-3">
-          {loading ? (
+          {posts.loading ? (
             <div>Loading...</div>
           ) : (
             <ProfileList
+              posts={posts}
               users={users}
-              title="Here's the current roster of friends..."
+              title="Here's the current sellers..."
             />
           )}
         </div>
