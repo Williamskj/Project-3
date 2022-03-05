@@ -38,6 +38,12 @@
 
 ## Installation
 ----------
+```md
+- Clone the repository.
+- npm install in the terminal to install all dependencies for application.
+- npm start to start the application locally.
+- The application should now be running on http://localhost:3001.
+```
 
 ## Deployment
 ----------
