@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const postSchema = require('./Post');
+// const postSchema = require('./Post');
 
 const userSchema = new Schema({
   name: {
@@ -23,8 +23,8 @@ const userSchema = new Schema({
   },
   savedPosts: [
     {
-      type: Schema.Types.ObjectId,
-      ref: 'Post',
+      type: String,
+      trim: true,
     },
   ]
 });

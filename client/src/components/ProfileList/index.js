@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const userList = ({ users, title }) => {
+  if (!users.length) {
+    return <h3>No users Yet</h3>;
+  }
 
   return (
     <div>
