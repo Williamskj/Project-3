@@ -47,13 +47,13 @@ const Profile = () => {
   return (
     <div>
       <h2 className="card-header">
-        {userId ? `${user.name}'s` : 'Your'} friends have endorsed these
-        skills...
+        {userId ? `${user.name}'s` : 'Your'} following beverages are for selling:
+        
       </h2>
 
-      {user.skills?.length > 0 && (
+      {user.savedPosts?.length > 0 && (
         <SkillsList
-          skills={user.skills}
+          savedPosts={user.savedPosts}
           isLoggedInUser={!userId && true}
         />
       )}

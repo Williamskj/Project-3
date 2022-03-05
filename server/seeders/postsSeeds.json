@@ -1,0 +1,73 @@
+[
+    {
+        "title": "Beer",
+        "description": "Keyann is sell delicious Beer on this website for only 4.99$ a Can",
+        "user": "Keyann Williams",
+        "comments": [
+            {
+                "commentText": "wow this beer is so good!", 
+                "commentAuthor": "Yudong"
+            }
+        ]
+      },
+
+      {
+        "title": "Wine",
+        "description": "Newton is sell delicious Wine on this website for only 4.99$ a Can",
+        "user": "Newton Hoang",
+        "comments": [
+            {
+                "commentText": "wow this beer is so good!", 
+                "commentAuthor": "Yudong"
+            }
+        ]
+      },
+
+      {
+        "title": "Tea",
+        "description": "Yudong is sell delicious Beer on this website for only 4.99$ a Can",
+        "user": "Yudong Lu",
+        "comments": [
+            {
+                "commentText": "wow this beer is so good!", 
+                "commentAuthor": "Yudong"
+            }
+        ]
+      },
+
+      {
+        "title": "Red Wine",
+        "description": "Keyann is sell delicious Beer on this website for only 4.99$ a Can",
+        "user": "Keyann Williams",
+        "comments": [
+            {
+                "commentText": "wow this beer is so good!", 
+                "commentAuthor": "Yudong"
+            }
+        ]
+      },
+
+      {
+        "title": "Soda",
+        "description": "Newton is sell delicious Beer on this website for only 4.99$ a Can",
+        "user": "Newton Hoang",
+        "comments": [
+            {
+                "commentText": "wow this beer is so good!", 
+                "commentAuthor": "Yudong"
+            }
+        ]
+      },
+      {
+        "title": "water",
+        "description": "Newton is sell delicious Beer on this website for only 4.99$ a Can",
+        "user": "Newton Hoang",
+        "comments": [
+            {
+                "commentText": "wow this beer is so good!", 
+                "commentAuthor": "Yudong"
+            }
+        ]
+      }
+
+]

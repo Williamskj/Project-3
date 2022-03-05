@@ -46,36 +46,47 @@ const resolvers = {
 
     // Add a third argument to the resolver to access data in our `context`
     addPost: async (parent, { posts }, context) => {
-      console.log('Context!!! in add post', context.user)
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
       if (context.user) {
-        return User.findOneAndUpdate(
-          { _id: context.user._id },
-          {
-            $addToSet: { savedPosts: posts },
-          },
-          {
-            new: true,
-            runValidators: true,
-          }
-        );
+        try {
+          const newPost = await Post.create(
+            {
+              title: posts.title,
+              description: posts.description,
+              user: context.user._id,
+              comments: []
+            }
+          );
+          return newPost
+        } catch (err) {
+          console.log('Error Resolvers', err)
+        }
+        // return User.findOneAndUpdate(
+        //   { _id: context.user._id },
+        //   {
+        //     $addToSet: { savedPosts: posts },
+        //   },
+        //   {
+        //     new: true,
+        //     runValidators: true,
+        //   }
+        // );
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError('You need to be logged in!');
     },
-    addComment: async (parent, { postId, comments }, context) => {
+    addComment: async (parent, { postId, commentText }, context) => {
       // If context has a `user` property, that means the user executing this mutation has a valid JWT and is logged in
       if (context.user) {
-        return Post.findOneAndUpdate(
+        const updatePost = await Post.findOneAndUpdate(
           { _id: postId },
-          {
-            $addToSet: { savedComments: comments },
-          },
+          { $addToSet: { comments: { commentText } }, },
           {
             new: true,
             runValidators: true,
           }
         );
+        return updatePost
       }
       // If user attempts to execute this mutation and isn't logged in, throw an error
       throw new AuthenticationError('You need to be logged in!');
@@ -90,21 +101,31 @@ const resolvers = {
     // Make it so a logged in user can only remove a skill from their own profile
     removePost: async (parent, { postId }, context) => {
       if (context.user) {
-        return User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { savedPosts: { _id: postId } } },
-          { new: true }
+        const postDelete = await Post.findOneAndDelete(
+          {
+            _id: postId,
+          },
         );
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { posts: postDelete._id } }
+        );
+        return postDelete
       }
       throw new AuthenticationError('You need to be logged in!');
     },
     removeComment: async (parent, { postId, commentId }, context) => {
       if (context.user) {
-        return Post.findOneAndUpdate(
-          { _id: postId },
-          { $pull: { savedComments: { _id: commentId }}},
-          { new: true }
-        );
+        try {
+          const commentDelete = Post.findOneAndUpdate(
+            { _id: postId },
+            { $pull: { comments: { _id: commentId } } },
+            { new: true }
+          );
+          return commentDelete
+        } catch (err) {
+          console.log('error in removeComment', err)
+        }
       }
       throw new AuthenticationError('You need to be logged in!');
     },

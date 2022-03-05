@@ -14,10 +14,6 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Store from './pages/Store';
-import Buy from './pages/BuyCat';
-import Sell from './pages/SellCat';
-
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -55,15 +51,6 @@ function App() {
             </Route>
             <Route exact path="/signup">
               <Signup />
-            </Route>
-            <Route exact path="/store">
-              <Store />
-            </Route>
-            <Route exact path="/store/buy">
-              <Buy />
-            </Route>
-            <Route exact path="/store/sell">
-              <Sell />
             </Route>
             <Route exact path="/me">
               <Profile />
