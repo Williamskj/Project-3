@@ -22,7 +22,7 @@ const Reviews = () => {
             <ProfileList
               posts={posts}
               users={users}
-              title="Here's are some Reviews:"
+              title="Here are some Reviews:"
             />
           )}
         </div>

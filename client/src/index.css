@@ -22,8 +22,22 @@ body {
   background-color: #fffde7;
 }
 
-.brand-logo img{
-  width: 5%;
+.navText {
+  margin-left: 2%;
+  font-size: large;
+  font-weight: 500;
+}
+
+.homebody {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
 }
 
 /**
@@ -433,8 +447,8 @@ a {
 }
 
 a:hover {
-  color: #065b83;
-  text-decoration: underline;
+  color: #ff9800 ;
+  text-decoration: none;
 }
 
 /* HEIGHT / WIDTH UTILS */
@@ -941,7 +955,7 @@ a:hover {
 }
 
 .bg-dark {
-  background-color: #1a1a1a !important;
+  background-color: #2d304f !important;
 }
 
 .bg-white {
@@ -1035,12 +1049,12 @@ a:hover {
 }
 
 .btn.btn-info {
-  background-color: #1bbc9b;
+  background-color: #fb8c00 !important;
   color: #ffffff;
 }
 
 .btn.btn-info:hover {
-  background-color: #31e1bd;
+  background-color: #ffc107 !important;
 }
 
 .btn.btn-light {
@@ -1089,7 +1103,6 @@ a:hover {
 }
 
 .card {
-  border: 1px solid #1a1a1a;
   margin-bottom: 1rem;
 }
 

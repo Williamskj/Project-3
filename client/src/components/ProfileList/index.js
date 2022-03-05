@@ -14,16 +14,17 @@ const userList = ({ users, title, posts }) => {
           posts.map((post) => (
             <div key={post._id} className="col-12 col-xl-6">
               <div className="card mb-3">
-                <h4 className="card-header bg-dark text-light p-2 m-0">
-                  {post.title} <br />
-                  {post.description}
+                <div className="card-header bg-dark text-light p-2 m-0">
+                  <h4>{post.title}</h4>
+                  <br />
+                  <body className="card-body">{post.description}</body>
                   {/* By {post.user} */}
                   {/* <span className="text-white" style={{ fontSize: '1rem' }}>
                     currently selling {user.savedPosts ? user.savedPosts.length : 0}{' '}
                     beverage
                     {user.savedPosts && user.savedPosts.length === 1 ? '' : 's'}
                   </span> */}
-                </h4>
+                </div>
 
                 {/* <Link
                   className="btn btn-block btn-squared btn-light text-dark"

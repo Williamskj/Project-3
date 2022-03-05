@@ -2,6 +2,7 @@
     {
         "title": "Mount Si",
         "description": "Gonna have to camp in an RV or trailer, but the hiking is top notch. 4/5",
+        "user": "Keyann Williams",
         "comments": [
             {
                 "commentText": "Neato Burrito", 
@@ -13,6 +14,7 @@
       {
         "title": "Mount St Helens",
         "description": "Great Hike, pretty alright camping spots. 3/5",
+        "user": "Yudon Lu",
         "comments": [
             {
                 "commentText": "To smokey", 
@@ -24,6 +26,7 @@
       {
         "title": "Tinkham Campground",
         "description": "Very Green, spots for RV's and trailers. Not many spots to hike. 3/5",
+        "user": "Eddy Tuzolana",
         "comments": [
             {
                 "commentText": "Very Green", 
@@ -35,6 +38,7 @@
       {
         "title": "Gold Basin Campground",
         "description": "Great View of River. Doesn't let you fish, which is Heresy. 2/5",
+        "user": "Newton Hoang",
         "comments": [
             {
                 "commentText": "Send them to Sigmar", 
