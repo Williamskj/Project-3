@@ -3,25 +3,25 @@
     "name": "Keyann Williams",
     "email": "keyann@123.com",
     "password": "password01",
-    "skills": ["Beer", "Wine", "Liquor"]
+    "savedPosts": "Beer"
   },
   {
     "name": "Newton Hoang",
     "email": "newton@123.com",
     "password": "password02",
-    "skills": ["Tea", "Buble tea", "coffee", "soda"]
+    "savedPosts": ["Tea", "Buble tea", "coffee", "soda"]
   },
   {
     "name": "Yudong Lu",
     "email": "yudong@123.com",
     "password": "password03",
-    "skills": ["juice", "hot coco", "wine", "beer", "tea"]
+    "savedPosts": ["juice", "hot coco", "wine", "beer", "tea"]
   },
   {
     "name": "Eddy Tuzolana",
     "email": "kbeck@techfriends.dev",
     "password": "password04",
-    "skills": [
+    "savedPosts": [
       "sports dirnks",
       "juice",
       "hot coco",
@@ -32,13 +32,13 @@
     "name": "Edward V. Berard",
     "email": "evberard@techfriends.dev",
     "password": "password05",
-    "skills": ["soda","juice","beer"]
+    "savedPosts": ["soda","juice","beer"]
   },
   {
     "name": "Alan Kay",
     "email": "akay@techfriends.dev",
     "password": "password06",
-    "skills": [
+    "savedPosts": [
       "soda",
       "Coke",
       "vodka"
@@ -48,25 +48,25 @@
     "name": "C.A.R. Hoare",
     "email": "choare@techfriends.dev",
     "password": "password07",
-    "skills": ["vodka", "juice", "Coke"]
+    "savedPosts": ["vodka", "juice", "Coke"]
   },
   {
     "name": "David Thomas",
     "email": "dthomas@techfriends.dev",
     "password": "password08",
-    "skills": ["liquor", "Coke", "milk", "vodka"]
+    "savedPosts": ["liquor", "Coke", "milk", "vodka"]
   },
   {
     "name": "Donald Knuth",
     "email": "dknuth@techfriends.dev",
     "password": "password09",
-    "skills": ["beer"]
+    "savedPosts": ["beer"]
   },
   {
     "name": "Lernantino",
     "email": "lernantino@techfriends.dev",
     "password": "password10",
-    "skills": [
+    "savedPosts": [
       "beer",
       "juice",
       "liquor",
