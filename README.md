@@ -40,9 +40,9 @@
 ----------
 ```md
 - Clone the repository.
-- npm install in the terminal to install all dependencies for application.
-- npm start to start the application locally.
-- The application should now be running on http://localhost:3001.
+- run `npm install` in the terminal to install all dependencies for application.
+- run `npm run seed` to start seeder and seeding your database
+- run `npm run develop` to start React app!
 ```
 
 ## Deployment
