@@ -38,16 +38,21 @@
 
 ## Installation
 ----------
+```md
+- Clone the repository.
+- npm install in the terminal to install all dependencies for application.
+- npm start to start the application locally.
+- The application should now be running on http://localhost:3001.
+```
 
 ## Deployment
 ----------
 - Deploylink (Heroku) 
-<a href=""></a>
+<a href="https://project-03-03-04-2022.herokuapp.com/">Deploy Link</a>
 
 - Git Repository (Git Hub) 
-<a href=""></a>
+<a href="https://github.com/Williamskj/Project-3">Github Link</a>
 
 ## License
 ----------
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)<br>https://opensource.org/licenses/MIT
-  

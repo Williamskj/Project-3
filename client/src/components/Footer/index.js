@@ -12,10 +12,10 @@ const Footer = () => {
             className="btn btn-dark mb-3"
             onClick={() => history.goBack()}
           >
-            &larr; Go Back
+            Return
           </button>
         )}
-        <h4>&copy; {new Date().getFullYear()} - Riverbed Beverages</h4>
+        <h4>&copy; {new Date().getFullYear()} - Campers United</h4>
       </div>
     </footer>
   );

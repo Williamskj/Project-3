@@ -65,7 +65,7 @@ const Profile = () => {
   return (
     <div>
       <h2 className="card-header">
-        {userId ? `${user.username}'s` : 'Your'} following beverages are for selling:
+        {userId ? `${user.username}'s` : 'Create a Review for a Campsite'} 
 
       </h2>
 

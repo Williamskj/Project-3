@@ -14,7 +14,7 @@ const PostForm = ({ userId, handleFormSubmit, formData, setFormData }) => {
 
   return (
     <div>
-      <h4>Endorse some more Posts below.</h4>
+      <h4>Write about your campsite experience!</h4>
 
       {Auth.loggedIn() ? (
         <form
@@ -23,7 +23,7 @@ const PostForm = ({ userId, handleFormSubmit, formData, setFormData }) => {
         >
           <div className="col-12 col-lg-9">
             <input
-              placeholder="Endorse some Posts..."
+              placeholder="Review Title"
               value={formData.title}
               className="form-input w-100"
               onChange={(event) => setFormData({
@@ -41,7 +41,7 @@ const PostForm = ({ userId, handleFormSubmit, formData, setFormData }) => {
 
           <div className="col-12 col-lg-3">
             <button className="btn btn-info btn-block py-3" type="submit">
-              Endorse Post
+              Post Review
             </button>
           </div>
           {error && (
@@ -52,7 +52,7 @@ const PostForm = ({ userId, handleFormSubmit, formData, setFormData }) => {
         </form>
       ) : (
         <p>
-          You need to be logged in to endorse Posts. Please{' '}
+          You need to be logged in to post reviews. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
