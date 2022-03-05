@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Profile from './pages/Profile';
+import Reviews from './pages/Reviews';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Header from './components/Header';
@@ -50,15 +51,19 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
+            <Route exact path="/reviews">
+              <Reviews />
+            </Route>
             <Route exact path="/login">
               <Login />
             </Route>
             <Route exact path="/signup">
               <Signup />
+            {/*<Route exact path="/store">
             </Route>
             <Route exact path="/store">
               <Store />
-            {/* </Route>
+             </Route>
             <Route exact path="/store/buy">
               <Buy />
             </Route>

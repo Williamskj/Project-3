@@ -5,7 +5,7 @@ import ProfileList from '../components/ProfileList';
 
 import { QUERY_USERS, QUERY_POSTS } from '../utils/queries';
 
-const Home = () => {
+const Reviews = () => {
   const { loading, data } = useQuery(QUERY_USERS);
   const postdata = useQuery(QUERY_POSTS);
   const users = data?.users || [];
@@ -14,10 +14,7 @@ const Home = () => {
 
   return (
     <main>
-      <div>
-              <img class="brand-logo" src="https://cdn.discordapp.com/attachments/949494830373941291/949580616356233247/Campers_United-logos.jpeg"></img>
-            </div>
-      {/* <div className="flex-row justify-center">
+      <div className="flex-row justify-center">
         <div className="col-12 col-md-10 my-3">
           {posts.loading ? (
             <div>Loading...</div>
@@ -29,9 +26,9 @@ const Home = () => {
             />
           )}
         </div>
-      </div> */}
+      </div>
     </main>
   );
 };
 
-export default Home;
+export default Reviews;

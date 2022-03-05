@@ -19,6 +19,11 @@ html {
  */
 body {
   margin: 0;
+  background-color: #fffde7;
+}
+
+.brand-logo img{
+  width: 5%;
 }
 
 /**

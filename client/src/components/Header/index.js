@@ -15,10 +15,11 @@ const Header = () => {
   return (
         <nav>
             <div class="nav-wrapper teal darken-3">
-            <a href="/" class="brand-logo">Logo</a>
+            <a href="/" class="brand-logo">Campers United</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="/">Home</a></li>
                 {/* <li><a href="/store">Store</a></li> */}
+                <li><a href="/reviews">Reviews</a></li>
               {Auth.loggedIn() ? (
                 <>
                 <li><a href="/me">Post</a></li>

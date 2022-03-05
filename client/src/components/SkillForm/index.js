@@ -14,7 +14,7 @@ const PostForm = ({ userId, handleFormSubmit, formData, setFormData }) => {
 
   return (
     <div>
-      <h4>Create a Review</h4>
+      <h4>Write about your campsite experience!</h4>
 
       {Auth.loggedIn() ? (
         <form

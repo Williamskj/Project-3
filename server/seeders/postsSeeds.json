@@ -1,73 +1,45 @@
 [
     {
-        "title": "Beer",
-        "description": "Keyann is sell delicious Beer on this website for only 4.99$ a Can",
-        "user": "Keyann Williams",
+        "title": "Mount Si",
+        "description": "Gonna have to camp in an RV or trailer, but the hiking is top notch. 4/5",
         "comments": [
             {
-                "commentText": "wow this beer is so good!", 
-                "commentAuthor": "Yudong"
+                "commentText": "Neato Burrito", 
+                "commentAuthor": "Newton Hoang"
             }
         ]
       },
 
       {
-        "title": "Wine",
-        "description": "Newton is sell delicious Wine on this website for only 4.99$ a Can",
-        "user": "Newton Hoang",
+        "title": "Mount St Helens",
+        "description": "Great Hike, pretty alright camping spots. 3/5",
         "comments": [
             {
-                "commentText": "wow this beer is so good!", 
-                "commentAuthor": "Yudong"
+                "commentText": "To smokey", 
+                "commentAuthor": "Eddy Tuzolana"
             }
         ]
       },
 
       {
-        "title": "Tea",
-        "description": "Yudong is sell delicious Beer on this website for only 4.99$ a Can",
-        "user": "Yudong Lu",
+        "title": "Tinkham Campground",
+        "description": "Very Green, spots for RV's and trailers. Not many spots to hike. 3/5",
         "comments": [
             {
-                "commentText": "wow this beer is so good!", 
-                "commentAuthor": "Yudong"
+                "commentText": "Very Green", 
+                "commentAuthor": "Yudong Lu"
             }
         ]
       },
 
       {
-        "title": "Red Wine",
-        "description": "Keyann is sell delicious Beer on this website for only 4.99$ a Can",
-        "user": "Keyann Williams",
+        "title": "Gold Basin Campground",
+        "description": "Great View of River. Doesn't let you fish, which is Heresy. 2/5",
         "comments": [
             {
-                "commentText": "wow this beer is so good!", 
-                "commentAuthor": "Yudong"
-            }
-        ]
-      },
-
-      {
-        "title": "Soda",
-        "description": "Newton is sell delicious Beer on this website for only 4.99$ a Can",
-        "user": "Newton Hoang",
-        "comments": [
-            {
-                "commentText": "wow this beer is so good!", 
-                "commentAuthor": "Yudong"
-            }
-        ]
-      },
-      {
-        "title": "water",
-        "description": "Newton is sell delicious Beer on this website for only 4.99$ a Can",
-        "user": "Newton Hoang",
-        "comments": [
-            {
-                "commentText": "wow this beer is so good!", 
-                "commentAuthor": "Yudong"
+                "commentText": "Send them to Sigmar", 
+                "commentAuthor": "Keyann Williams"
             }
         ]
       }
-
 ]
