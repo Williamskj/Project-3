@@ -14,19 +14,11 @@ const Home = () => {
 
   return (
     <main>
-      <div className="flex-row justify-center">
-        <div className="col-12 col-md-10 my-3">
-          {posts.loading ? (
-            <div>Loading...</div>
-          ) : (
-            <ProfileList
-              posts={posts}
-              users={users}
-              title="Here's the current sellers..."
-            />
-          )}
-        </div>
+      <h1 className='center'>Welcome to</h1>
+      <div>
+        <img className="logo" src="https://cdn.discordapp.com/attachments/949494830373941291/949580616356233247/Campers_United-logos.jpeg"></img>
       </div>
+      <body className='homebody'>Campers United allows users to sign up an account, login, and review all other people’s post about their camping experiences. Or go to their own profiles and create reviews.</body>
     </main>
   );
 };
