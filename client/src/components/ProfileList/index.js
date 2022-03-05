@@ -17,7 +17,7 @@ const userList = ({ users, title, posts }) => {
                 <h4 className="card-header bg-dark text-light p-2 m-0">
                   {post.title} <br />
                   {post.description}
-                  By {post.user}
+                  {/* By {post.user} */}
                   {/* <span className="text-white" style={{ fontSize: '1rem' }}>
                     currently selling {user.savedPosts ? user.savedPosts.length : 0}{' '}
                     beverage

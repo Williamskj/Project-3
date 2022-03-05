@@ -6,24 +6,11 @@ import { ADD_POST } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
-const PostForm = ({ userId }) => {
+const PostForm = ({ userId, handleFormSubmit, formData, setFormData }) => {
+
   const [post, setPost] = useState('');
 
   const [addPost, { error }] = useMutation(ADD_POST);
-
-  const handleFormSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      const data = await addPost({
-        variables: { userId, post },
-      });
-
-      setPost('');
-    } catch (err) {
-      console.error(err);
-    }
-  };
 
   return (
     <div>
@@ -37,10 +24,19 @@ const PostForm = ({ userId }) => {
           <div className="col-12 col-lg-9">
             <input
               placeholder="Endorse some Posts..."
-              value={post}
+              value={formData.title}
               className="form-input w-100"
-              onChange={(event) => setPost(event.target.value)}
+              onChange={(event) => setFormData({
+                ...formData,
+                title: event.target.value
+              })}
             />
+            <textarea value = {formData.description} onChange = {(event) => setFormData({
+              ...formData,
+              description: event.target.value
+            })}>
+
+            </textarea>
           </div>
 
           <div className="col-12 col-lg-3">
