@@ -34,12 +34,12 @@ const Profile = () => {
     console.log('formData', formData)
     setFormData({
       ...formData,
-      user: Auth.getUser().data.name
+      user: Auth.getUser().data.username
     })
     console.log('getUser', formData)
     await addPost({
       variables: {
-        input: { ...formData, user: Auth.getUser().name }
+        input: { ...formData, user: Auth.getUser().username }
       }
     })
     window.location.href = "/"
@@ -65,7 +65,7 @@ const Profile = () => {
   return (
     <div>
       <h2 className="card-header">
-        {userId ? `${user.name}'s` : 'Your'} following beverages are for selling:
+        {userId ? `${user.username}'s` : 'Your'} following beverages are for selling:
 
       </h2>
 
