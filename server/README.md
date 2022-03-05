@@ -62,3 +62,5 @@ In this demo, you will create a profile and verify JSON Web Tokens to log into a
 * Open your browser to <https://jwt.io/> and paste the `token` in the `Encoded` text box.
 
   * In the `Decoded` boxes, you should be able to see the Header, Payload (which includes the `email` and `_id`), and Signature.
+
+
