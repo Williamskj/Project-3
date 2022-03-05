@@ -19,7 +19,8 @@
 
 ## User Story
 ----------
-
+AS A USER, Id like to be able to sign up and be logged in.
+Id like to be able to make a Post, detailing A title i of a campsite, and a description of said campsite.
 
 ## Tools Used
 ----------
