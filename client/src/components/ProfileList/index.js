@@ -17,7 +17,7 @@ const userList = ({ users, title, posts }) => {
                 <div className="card-header bg-dark text-light p-2 m-0">
                   <h4>{post.title}</h4>
                   <br />
-                  <body className="card-body">{post.description}</body>
+                  <body className="card-text card-body">{post.description}</body>
                   {/* By {post.user} */}
                   {/* <span className="text-white" style={{ fontSize: '1rem' }}>
                     currently selling {user.savedPosts ? user.savedPosts.length : 0}{' '}
